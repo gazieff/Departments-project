@@ -204,23 +204,23 @@ namespace Departments_project
                     hrm.RemoveEmployee(number, dpname);
                     break;
             }
-            //Console.WriteLine("Departamentler : ");
-            //foreach (var item in hrm.Departments)
-            //{
-            //    Console.WriteLine(item.Name + "  " + item.WorkerLimit + "  " + item.SalaryLimit);
-            //}
-            //Console.WriteLine("Isciler : ");
-            //foreach (var department in hrm.Departments)
-            //{
-            //    foreach (var employee in department.Employees)
-            //    {
-            //        Console.WriteLine("Isci Nomresi : " + employee.No
-            //            + "\tIsci Ad ve Soyadi : " + employee.Fullname
-            //            + "\tIscinin Departamentinin adi : " + employee.DepartmentName
-            //            + "\tIscinin Geliri : " + employee.Salary);
-            //    }
-            //}
-            Console.Read();
+            Console.WriteLine("Departamentler : ");
+            foreach (var item in hrm.Departments)
+            {
+                Console.WriteLine(item.Name + "  " + item.WorkerLimit + "  " + item.SalaryLimit);
+            }
+            Console.WriteLine("Isciler : ");
+            foreach (var department in hrm.Departments)
+            {
+                foreach (var employee in department.Employees)
+                {
+                    Console.WriteLine("Isci Nomresi : " + employee.No
+                        + "\tIsci Ad ve Soyadi : " + employee.Fullname
+                        + "\tIscinin Departamentinin adi : " + employee.DepartmentName
+                        + "\tIscinin Geliri : " + employee.Salary);
+                }
+            }
+            Console.ReadLine();
         }
     }
 }
